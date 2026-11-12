@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "gams": {
+      "type": "http",
+      "url": "https://open.gamstandards.com/mcp"
+    }
+  }
+}

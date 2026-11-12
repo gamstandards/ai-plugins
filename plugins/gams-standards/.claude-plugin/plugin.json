@@ -1,0 +1,28 @@
+{
+  "name": "gams-standards",
+  "displayName": "GAMS Standards",
+  "version": "1.1.6",
+  "description": "Work with the open asset-management standards on GAMS Standards — DDQs, fund data definitions, regulatory questionnaires, prospectus templates — straight from your AI assistant, read-only.",
+  "author": {
+    "name": "Global Asset Management Standards",
+    "url": "https://open.gamstandards.com"
+  },
+  "homepage": "https://open.gamstandards.com/use-with-ai",
+  "repository": "https://github.com/gamstandards/ai-plugins",
+  "license": "CC0-1.0",
+  "keywords": [
+    "asset management",
+    "standards",
+    "DDQ",
+    "SFDR",
+    "openfunds",
+    "INREV",
+    "EFAMA",
+    "fund data"
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://open.gamstandards.com/use-with-ai",
+  "supportUrl": "https://gamstandards.com/contact",
+  "privacyPolicyUrl": "https://open.gamstandards.com/privacy",
+  "termsOfServiceUrl": "https://gamstandards.com/legal"
+}

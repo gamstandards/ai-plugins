@@ -1,0 +1,21 @@
+{
+  "name": "gamstandards",
+  "owner": {
+    "name": "Global Asset Management Standards",
+    "url": "https://gamstandards.com"
+  },
+  "plugins": [
+    {
+      "name": "gams-standards",
+      "source": "./plugins/gams-standards",
+      "description": "Work with the open asset-management standards on GAMS Standards — DDQs, fund data definitions, regulatory questionnaires, prospectus templates — straight from your AI assistant, read-only.",
+      "version": "1.1.6"
+    },
+    {
+      "name": "gams-publisher",
+      "source": "./plugins/gams-publisher",
+      "description": "Run your GAMS working groups and collections from your AI assistant with your own GAMS permissions: read groups, files, actions, discussions, collections and analytics, and make changes only if you allow them.",
+      "version": "1.3.1"
+    }
+  ]
+}
