@@ -9,7 +9,7 @@ Run your GAMS working groups and collections from your AI assistant with your ow
 1. Download the zip; no need to unzip it
 2. In the Claude desktop app open **Customise → Plugins**, click **Add plugin** and upload the zip, then make sure it is enabled
 3. The first time Claude uses a GAMS Publisher tool, a Connect card asks you to sign in with your GAMS account and allow access
-4. Claude Code instead: run `claude --plugin-dir ~/Downloads/gams-publisher-claude-1.3.1.zip`, then `/mcp` to sign in
+4. Claude Code instead: run `claude --plugin-dir ~/Downloads/gams-publisher-claude-1.4.0.zip`, then `/mcp` to sign in
 
 Or add the MCP server yourself: https://publishers.gamstandards.com/mcp (setup steps for each assistant: https://publishers.gamstandards.com/settings/ai).
 

@@ -15,7 +15,7 @@
       "name": "gams-publisher",
       "source": "./plugins/gams-publisher",
       "description": "Run your GAMS working groups and collections from your AI assistant with your own GAMS permissions: read groups, files, actions, discussions, collections and analytics, and make changes only if you allow them.",
-      "version": "1.3.1"
+      "version": "1.4.0"
     }
   ]
 }

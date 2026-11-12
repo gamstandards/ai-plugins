@@ -502,7 +502,7 @@ Access needed: publisher.write.
 
 ## `get_document_outline`: Document outline for editing
 
-The structure of a Word (.docx) or Excel (.xlsx) document, for editing it with edit_document. Word: paragraphs and tables in order, each paragraph with an anchor and a hash; content controls (form fields: tag, type, value, options); comments (with replies and resolved state) and tracked changes with their authors. Excel: sheets with used ranges, then the cells of one sheet or range with values and formulas; defined names; comments. Also returns the version (pass it to edit_document as base_version), who has the document open in the editor now (edits are refused while anyone does), and recommended_mode: "direct" only when the person is the only one who has saved the document. Long documents are paged: pass next_cursor as cursor. To read a document's text use read_document.
+The structure of a Word (.docx) or Excel (.xlsx) document, for editing it with edit_document. Word: paragraphs and tables in order, each paragraph with an anchor and a hash; content controls (form fields: tag, type, value, options); comments (with replies and resolved state) and tracked changes with their authors. Excel: sheets with used ranges, then the cells of one sheet or range with values and formulas; defined names; comments. Also returns the version (pass it to edit_document as base_version), who has the document open in the editor now (edits are then queued until they close it), edits already queued, and recommended_mode: "direct" only when the person is the only one who has saved the document. Long documents are paged: pass next_cursor as cursor. To read a document's text use read_document.
 
 Access needed: publisher.read.
 
@@ -517,7 +517,7 @@ Access needed: publisher.read.
 
 ## `edit_document`: Edit document
 
-Change a Word (.docx) or Excel (.xlsx) document with structured operations, as the signed-in person. Read it first with get_document_outline. mode "suggest" (the default) makes tracked changes and comments in the person's own name for the group to accept or reject; in Excel, which has no tracked changes, each suggested cell value becomes a comment on the cell. mode "direct" edits in place: use it only when the person asks, typically for documents only they work on (recommended_mode "direct"). All operations apply or none do. Refused while anyone has the document open in the editor. Excel: after value changes the whole workbook's formula results are recalculated, which takes a few seconds (up to about 30 for very large workbooks), so put all changes to a workbook in ONE call rather than one call per cell; edits to the same document run one at a time. Call with dry_run=true first and show the person the report; every saved change can be undone with restore_document_version.
+Change a Word (.docx) or Excel (.xlsx) document with structured operations, as the signed-in person. Read it first with get_document_outline. mode "suggest" (the default) makes tracked changes and comments in the person's own name for the group to accept or reject; in Excel, which has no tracked changes, each suggested cell value becomes a comment on the cell. mode "direct" edits in place: use it only when the person asks, typically for documents only they work on (recommended_mode "direct"). All operations apply or none do. While anyone has the document open in the editor, the edit is checked against the current version and queued: it is added when the editor session ends (the person can also add it at once from the editor's banner), every paragraph found again by its hash, so each operation then needs expect_hash (Excel: expect); list_pending_edits shows where it stands, and the person is emailed if it cannot be added. Excel: after value changes the whole workbook's formula results are recalculated, which takes a few seconds (up to about 30 for very large workbooks), so put all changes to a workbook in ONE call rather than one call per cell; edits to the same document run one at a time. Call with dry_run=true first and show the person the report; every saved change can be undone with restore_document_version.
 
 Word operations (each may carry expect_hash, the paragraph's hash from the outline; a mismatch refuses the whole call):
 - {"kind":"replace_text","anchor":"…","find":"old text","replace":"new text","occurrence":1}  (replace "" deletes; occurrence needed only when the text appears more than once)
@@ -544,6 +544,17 @@ Access needed: documents.write.
 | `idempotency_key` | string |  | Any unique string for this change (e.g. a UUID). Repeating a call with the same key returns the first result instead of acting twice. |
 | `mode` | string |  | "suggest" (default) or "direct". One of: suggest, direct. |
 | `operations` | array | yes | The operations, in order (see the tool description). |
+
+## `list_pending_edits`: Queued document edits
+
+Edits made with edit_document while the document was open in the editor wait in a queue until the editor session ends. This lists them, oldest first, with who has the document open now. With include_finished, edits from the last 24 hours that were applied (with the version they became), failed (with the reason, e.g. the paragraph changed meanwhile) or expired are listed too.
+
+Access needed: publisher.read.
+
+| Argument | Type | Required | Description |
+|---|---|---|---|
+| `document` | string | yes | groups/{g}/resources/{r}, collections/{c}/templates/{t} or collections/{c}/references/{r}, or a console URL. |
+| `include_finished` | boolean |  | Also list edits applied, failed or expired in the last 24 hours. |
 
 ## `create_document`: Create document
 

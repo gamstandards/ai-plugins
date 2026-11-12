@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.0
+
+- Edits to a document someone has open in the editor are queued and added when the editor closes, or at once when anyone in the document chooses "Add them now". The new list_pending_edits tool shows where queued edits stand.
+- People see your assistant's changes as made by you (via GAMS Connector).
+
 ## 1.3.1
 
 - Claude manifest names its icon and its documentation, support, privacy and terms links for the Claude directory; the ChatGPT listing links are public pages.

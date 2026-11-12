@@ -4,7 +4,7 @@ description: "Use when the user works on GAMS (Global Asset Management Standards
 license: CC0-1.0
 compatibility: "Needs the GAMS Publisher MCP server (publishers.gamstandards.com/mcp) with the user signed in to GAMS. Works in any assistant that supports remote MCP servers with OAuth."
 metadata:
-  version: "1.3.1"
+  version: "1.4.0"
   homepage: "https://publishers.gamstandards.com/settings/ai"
   publisher: "Global Asset Management Standards"
 ---
@@ -83,7 +83,9 @@ dates) and `create_action` for new ones, each with `dry_run` first.
 **Edit a working-group document.** `get_document_outline` (anchors, hashes, comments, tracked
 changes, version, who has it open) → `read_document` if you need the full text → `edit_document`
 with `base_version`, an `expect_hash` per paragraph and `dry_run: true` → show the user the
-report → apply. Reviewing: list the comments and tracked changes from the outline, reply or resolve
+report → apply. If someone has the document open in the editor, the edit is queued and added when
+they close it: tell the user it is queued, not saved (they can add it at once with "Add them now" in the
+editor), and check it with `list_pending_edits`. Reviewing: list the comments and tracked changes from the outline, reply or resolve
 comments, and accept or reject changes only as the user decides. Undo with
 `list_document_versions` and `restore_document_version`.
 
@@ -149,6 +151,7 @@ matching `get_` tool.
 | `update_resource_details` | Rename a working-group file or bookmark, or change its description. |
 | `get_document_outline` | The structure of a Word (.docx) or Excel (.xlsx) document, for editing it with edit_document. |
 | `edit_document` | Change a Word (.docx) or Excel (.xlsx) document with structured operations, as the signed-in person. |
+| `list_pending_edits` | Edits made with edit_document while the document was open in the editor wait in a queue until the editor session ends. |
 | `create_document` | Create a new Word (.docx) or Excel (.xlsx) document in a working group's files, as the signed-in person, ready to open and co-edit in the editor. |
 | `export_pdf` | Convert the current version of a Word, Excel or PowerPoint document to PDF and return a download link for the person. |
 | `list_document_versions` | A document's saved versions, newest first: when, by whom and how (in the editor, through an AI assistant, or a restore). |
