@@ -1,8 +1,8 @@
 {
   "name": "gams-standards",
   "displayName": "GAMS Standards",
-  "version": "1.1.7",
-  "description": "Work with the open asset-management standards on GAMS Standards — DDQs, fund data definitions, regulatory questionnaires, prospectus templates — straight from your AI assistant, read-only.",
+  "version": "1.1.8",
+  "description": "Read and cite the open asset-management standards on GAMS Standards (questionnaires, templates, reference documents, data schemas, glossaries and FAQs) straight from your AI assistant, read-only. Built using the AlisX Platform (alisx.com).",
   "author": {
     "name": "Global Asset Management Standards",
     "url": "https://open.gamstandards.com"
@@ -13,11 +13,11 @@
   "keywords": [
     "asset management",
     "standards",
+    "questionnaires",
     "DDQ",
     "SFDR",
-    "openfunds",
-    "INREV",
-    "EFAMA",
+    "data schemas",
+    "templates",
     "fund data"
   ],
   "icon": "./assets/icon.png",

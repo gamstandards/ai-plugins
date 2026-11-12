@@ -4,7 +4,7 @@ description: "Use when the user works on GAMS (Global Asset Management Standards
 license: CC0-1.0
 compatibility: "Needs the GAMS Publisher MCP server (publishers.gamstandards.com/mcp) with the user signed in to GAMS. Works in any assistant that supports remote MCP servers with OAuth."
 metadata:
-  version: "1.4.0"
+  version: "1.4.1"
   homepage: "https://publishers.gamstandards.com/settings/ai"
   publisher: "Global Asset Management Standards"
 ---

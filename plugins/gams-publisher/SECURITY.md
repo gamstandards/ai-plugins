@@ -1,6 +1,6 @@
 # What this package can and cannot do
 
-**Version 1.4.0** · published by Global Asset Management Standards at https://publishers.gamstandards.com/settings/ai
+**Version 1.4.1** · published by Global Asset Management Standards at https://publishers.gamstandards.com/settings/ai
 and in the GAMS repository https://github.com/gamstandards/ai-plugins, which the Claude directory installs from.
 Only install copies from one of those two places; for a downloaded zip, check the SHA-256 shown on
 that page against your file.

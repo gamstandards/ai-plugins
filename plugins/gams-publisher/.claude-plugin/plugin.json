@@ -3,7 +3,7 @@
     "name": "Global Asset Management Standards",
     "url": "https://publishers.gamstandards.com"
   },
-  "description": "Run your GAMS working groups and collections from your AI assistant with your own GAMS permissions: read groups, files, actions, discussions, collections and analytics, and make changes only if you allow them.",
+  "description": "Run your GAMS working groups and collections from your AI assistant with your own GAMS permissions: read groups, files, actions, discussions, collections and analytics, and make changes only if you allow them. Built using the AlisX Platform (alisx.com).",
   "displayName": "GAMS Publisher",
   "documentationUrl": "https://open.gamstandards.com/use-with-ai",
   "homepage": "https://publishers.gamstandards.com/settings/ai",
@@ -23,5 +23,5 @@
   "repository": "https://github.com/gamstandards/ai-plugins",
   "supportUrl": "https://gamstandards.com/contact",
   "termsOfServiceUrl": "https://gamstandards.com/legal",
-  "version": "1.4.0"
+  "version": "1.4.1"
 }

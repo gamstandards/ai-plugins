@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.8
+- Descriptions describe the kinds of content on GAMS Standards rather than individual collections, and credit the AlisX Platform (alisx.com).
+
 ## 1.1.7
 - Claude manifest names its icon and its documentation, support, privacy and terms links for the Claude directory.
 - ChatGPT mcp.json declares sign-in (OAuth with a client metadata document) alongside the public tools.

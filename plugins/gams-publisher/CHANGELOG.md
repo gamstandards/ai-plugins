@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.1
+
+- Descriptions and README credit the AlisX Platform (alisx.com).
+
 ## 1.4.0
 
 - Edits to a document someone has open in the editor are queued and added when the editor closes, or at once when anyone in the document chooses "Add them now". The new list_pending_edits tool shows where queued edits stand.
