@@ -6,7 +6,7 @@ using the AlisX Platform (https://alisx.com).
 
 | Plugin | What it does | Version |
 |---|---|---|
-| [gams-standards](plugins/gams-standards) | Read and cite the open asset-management standards on GAMS Standards: questionnaires, templates, reference documents, data schemas, glossaries and FAQs. Browsing needs no account; search and ask need a GAMS sign-in. | 1.1.8 |
+| [gams-standards](plugins/gams-standards) | Read and cite the open asset-management standards on GAMS Standards: questionnaires, templates, reference documents, data schemas, glossaries and FAQs. Browsing needs no account; search and ask need a GAMS sign-in. | 1.1.9 |
 | [gams-publisher](plugins/gams-publisher) | Run your GAMS working groups and collections with your own GAMS permissions. Needs a GAMS sign-in; makes changes only if you allow them. | 1.4.1 |
 
 Each plugin folder has its own README, SECURITY.md (what it can and cannot

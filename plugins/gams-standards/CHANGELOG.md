@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.9
+- get_reference_contents says that a bookmark reference returns the text of a third-party web page, and is marked open-world.
+
 ## 1.1.8
 - Descriptions describe the kinds of content on GAMS Standards rather than individual collections, and credit the AlisX Platform (alisx.com).
 

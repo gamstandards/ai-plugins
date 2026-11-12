@@ -66,7 +66,7 @@ Inputs:
 
 ## get_reference_contents
 
-Read a reference as Markdown with an outline. Long documents are returned in parts with a parts list saying which sections each part holds: follow Next MCP call to the final part to read the full contents, or pass section to go straight to the part you need. Document references (PDF, Word, Excel) are parsed from the file; bookmarks return the fetched page contents.
+Read a reference as Markdown with an outline. Long documents are returned in parts with a parts list saying which sections each part holds: follow Next MCP call to the final part to read the full contents, or pass section to go straight to the part you need. Document references (PDF, Word, Excel) are parsed from the file GAMS publishes. A bookmark reference is a link a working group added to the collection; it returns the text of that public web page, which is third-party content GAMS does not author.
 
 Inputs:
 - `collection_id` (string, required) — The collection: its UUID, its URL slug (e.g. "term-sheet") or its page link (a URL ending /collections/term-sheet). A link the user shared can be passed as it is.
