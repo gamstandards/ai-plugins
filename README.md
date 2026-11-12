@@ -5,7 +5,7 @@ GAMS through its MCP servers and teach it how to use them well.
 
 | Plugin | What it does | Version |
 |---|---|---|
-| [gams-standards](plugins/gams-standards) | Read and cite the open asset-management standards on GAMS Standards: DDQs, regulatory questionnaires, fund data schemas, glossaries and FAQs. Browsing needs no account; search and ask need a GAMS sign-in. | 1.1.6 |
+| [gams-standards](plugins/gams-standards) | Read and cite the open asset-management standards on GAMS Standards: DDQs, regulatory questionnaires, fund data schemas, glossaries and FAQs. Browsing needs no account; search and ask need a GAMS sign-in. | 1.1.7 |
 | [gams-publisher](plugins/gams-publisher) | Run your GAMS working groups and collections with your own GAMS permissions. Needs a GAMS sign-in; makes changes only if you allow them. | 1.3.1 |
 
 Each plugin folder has its own README, SECURITY.md (what it can and cannot

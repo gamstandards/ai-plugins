@@ -55,21 +55,25 @@ Inputs:
 
 ## get_template_contents
 
-Read a template file (Excel, Word, PDF, text) as Markdown with an outline. Long documents are returned in small parts: start with part 1 and follow Next MCP call until the final part to read the full contents or complete question bank. Use download_template_url for the original file bytes.
+Read a template file (Excel, Word, PDF, text) as Markdown with an outline. Long documents are returned in parts with a parts list saying which sections each part holds: follow Next MCP call to the final part to read the full contents or complete question bank, or pass section to go straight to the part you need. Use download_template_url for the original file bytes.
 
 Inputs:
 - `collection_id` (string, required) — The collection: its UUID, its URL slug (e.g. "term-sheet") or its page link (a URL ending /collections/term-sheet). A link the user shared can be passed as it is.
 - `template_id` (string, required) — The template UUID
-- `part` (integer) — 1-based content part (default 1). Read all parts using the next tool arguments returned before the body; the outline describes the entire document.
+- `part` (integer) — 1-based content part (default 1). Read all parts using the next tool arguments returned before the body; the outline and the parts list describe the entire document.
+- `section` (string) — Jump to the part holding this section: a section title from the parts list, or any text such as a field ID, a defined term or a question number. Returns that part and names the other parts where it appears. Takes precedence over part.
+- `part_chars` (integer) — Characters per part (default 16000, up to 64000). Larger parts mean fewer calls for long documents; keep the same value for every part of one document.
 
 ## get_reference_contents
 
-Read a reference as Markdown with an outline. Long documents are returned in small parts: start with part 1 and follow Next MCP call until the final part to read the full contents. Document references (PDF, Word, Excel) are parsed from the file; bookmarks return the fetched page contents.
+Read a reference as Markdown with an outline. Long documents are returned in parts with a parts list saying which sections each part holds: follow Next MCP call to the final part to read the full contents, or pass section to go straight to the part you need. Document references (PDF, Word, Excel) are parsed from the file; bookmarks return the fetched page contents.
 
 Inputs:
 - `collection_id` (string, required) — The collection: its UUID, its URL slug (e.g. "term-sheet") or its page link (a URL ending /collections/term-sheet). A link the user shared can be passed as it is.
 - `reference_id` (string, required) — The reference UUID
-- `part` (integer) — 1-based content part (default 1). Read all parts using the next tool arguments returned before the body; the outline describes the entire document.
+- `part` (integer) — 1-based content part (default 1). Read all parts using the next tool arguments returned before the body; the outline and the parts list describe the entire document.
+- `section` (string) — Jump to the part holding this section: a section title from the parts list, or any text such as a field ID, a defined term or a question number. Returns that part and names the other parts where it appears. Takes precedence over part.
+- `part_chars` (integer) — Characters per part (default 16000, up to 64000). Larger parts mean fewer calls for long documents; keep the same value for every part of one document.
 
 ## download_template_url
 

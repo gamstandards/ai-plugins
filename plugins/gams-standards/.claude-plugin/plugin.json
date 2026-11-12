@@ -1,7 +1,7 @@
 {
   "name": "gams-standards",
   "displayName": "GAMS Standards",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Work with the open asset-management standards on GAMS Standards — DDQs, fund data definitions, regulatory questionnaires, prospectus templates — straight from your AI assistant, read-only.",
   "author": {
     "name": "Global Asset Management Standards",

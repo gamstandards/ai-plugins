@@ -1,9 +1,12 @@
 # Changelog
 
-## 1.1.6
+## 1.1.7
 - Claude manifest names its icon and its documentation, support, privacy and terms links for the Claude directory.
 - ChatGPT mcp.json declares sign-in (OAuth with a client metadata document) alongside the public tools.
 - README says what the plugin sends and where, and names the GAMS GitHub repository as a source.
+
+## 1.1.6
+- Contents tools say which sections each part holds, jump straight to a section, and accept larger parts.
 
 ## 1.1.5
 - Collection tools accept the collection page link a user shares, or its URL slug, as well as its UUID.
